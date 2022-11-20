@@ -2,27 +2,54 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
 
-    </div>
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
-                Raw, organic honey
-            </h1>
-            <div class="my-5">
-                <h4>
-                    <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                </h4>
+<div class="container-fluid hero-container">
+    <div class="row hero-image">
+        <div class="col-10 offset-1 col-md-6 offset-md-6 p-0">
+            <div class="hero-text">
+                <div class="row mx-4">
+                    <h1 class="display-4 logo-font text-black pt-4">Raw, organic honey</h1>
+                </div>
+                <div class="row mx-4">
+                    <p class="text-white pr-4">We sell only the very best raw, organic honey made by native Welsh Black bees in the mountains of Eryri.</p>
+                    <p class="text-white">Browse the site for your favourite seasonal honey, or book a trip to see the hives or a training course to learn to keep your own bees.</p>
+                    <p class="text-white">At Jones Honey, bees and honey are our passion and we can't wait to share it with you.</p>
+                </div>
+                <div class="row mx-4">
+                    <div class="my-5">
+                        <h4>
+                            <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                        </h4>
+                    </div>
+                </div>
             </div>
+            
+            
+            
+           
         </div>
     </div>
 </div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-3 img-fluid">
+            <img src="/media/heather-honey-jar.png" class="product-image">
+        </div>
+        <div class="col-3 img-fluid">
+            <img src="/media/heather-honey-jar.png" class="product-image">
+        </div>
+        <div class="col-3 img-fluid">
+            <img src="/media/heather-honey-jar.png" class="product-image">
+        </div>
+        <div class="col-3 img-fluid">
+            <img src="/media/heather-honey-jar.png" class="product-image">
+        </div>
+    </div>
+</div>
+    
+
 {% endblock %}
