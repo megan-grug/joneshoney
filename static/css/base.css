@@ -31,6 +31,14 @@ body {
     width: 100%;
 }
 
+.jones-honey-name{
+    display: none;
+}
+
+.jones-honey-icon{
+    display: block;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -42,6 +50,10 @@ body {
 
 .darkheather{
     background-color: #635271;
+}
+
+.heather{
+    background-color: #a693b5;
 }
 
 .logo-font {
@@ -104,4 +116,15 @@ body {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/* swap name logo for icon logo at small screen size */
+@media (min-width: 768px) {
+    .jones-honey-name{
+        display: block;
+    }
+    /*
+    .jones-honey-logo{
+        display: none;
+    }*/
 }
