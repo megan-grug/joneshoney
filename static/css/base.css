@@ -58,10 +58,12 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    align-items: center;
 }
 
 .main-logo-link {
     width: fit-content;
+    align-items: center;
 }
 
 .shop-now-button {
@@ -73,6 +75,10 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.bg-black{
+    background-color: #000;
 }
 
 .shop-now-button:hover,

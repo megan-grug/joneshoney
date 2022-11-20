@@ -37,8 +37,8 @@
     <title>Jones Honey {% block extra_title%}{% endblock %}</title>
   </head>
   <body>
-
-    <nav class="navbar navbar-expand-lg darkheather text-black">
+    <header>
+      <nav class="navbar navbar-expand-lg darkheather text-black">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
             <h2 class="logo-font text-black my-0 jones-honey-name"><strong>Jones Honey</strong></h2>
             <i class="fa-solid fa-honey-pot icon jones-honey-icon text-black"></i>
@@ -103,6 +103,15 @@
             </div>
         </div>
       </nav>
+      <div id="message-banner" class="row text-center">
+        <div class="col bg-black text-white">
+          <h4 class="logo-font my-1">Free honey dripper with all orders over £{{ free_gift_threshold }}!</h4>
+        </div>
+
+      </div>
+    </header>
+
+    
     
     {% if messages %}
     <div class="message-container"></div>
