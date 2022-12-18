@@ -41,7 +41,7 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-light darkheather py-3">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link d-flex align-items-center">
-                    <h2 class="logo-font text-black my-0 jones-honey-name align-items-center"><strong>Jones Honey</strong></h2>
+                    <h2 class="logo-font text-black my-0 align-items-center"><strong>Jones Honey</strong></h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -100,7 +100,7 @@
                         </a>
                       </li>
                   </ul>
-                    <form method="GET" action="" class="form-inline my-2 my-lg-0">
+                    <form method="GET" action="{% url 'products' %}" class="form-inline my-2 my-lg-0">
                         <div class="input-group">
                             <input class="form-control mr-sm-2" type="text" name="q" placeholder="Type to search" aria-label="Search" aria-describedby="basic-addon1">
                             <div class="input-group-append">

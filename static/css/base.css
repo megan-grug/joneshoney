@@ -31,14 +31,6 @@ body {
     width: 100%;
 }
 
-.jones-honey-name{
-    display: none;
-}
-
-.jones-honey-icon{
-    display: block;
-}
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -126,16 +118,4 @@ body {
   .container {
     max-width: 80%;
   }
-}
-
-
-/* swap name logo for icon logo at small screen size */
-@media (min-width: 768px) {
-    .jones-honey-name{
-        display: block;
-    }
-    
-    .jones-honey-logo{
-        display: none;
-    }*
 }
