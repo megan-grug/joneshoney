@@ -259,7 +259,11 @@ Manual testing was undertaken on the following browsers with no noticable differ
 
 - Accessibility issue: 
     
-    The contrast was not sufficiently high on the labels for the input areas, I fixed this by changing the text colour from grey to black.
+    When the navbar is compressed at smaller screen sizes, the burger menu used is a dark grey instead of black. This is due to an issue overriding the Bootstrap 4 colour schemes. If using a custom colour scheme, the burger menu becomes transparent no matter what attempts are made to override the colour to black. I have therefore had to stick with Bootstraps built in navbar-light, which has slightly less contrast than I would have liked. 
+
+- Navbar layout:
+
+    Bootstrap's standard dropdown menu for 'My Account' displays slightly off the page to the right.
 
 - Google Chrome Dev Tools produced the following console issue on the 'edit_record.html' page:
 
