@@ -73,12 +73,12 @@
                             Shop
                         </a>
                         <div class="dropdown-menu heather" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item text-black" href="#">All Products</a>
+                            <a class="dropdown-item text-black" href="{% url 'products' %}">All Products</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-black" href="#">Honey</a>
-                            <a class="dropdown-item text-black" href="#">Accessories</a>
-                            <a class="dropdown-item text-black" href="#">Courses</a>                      
-                            <a class="dropdown-item text-black" href="#">Gift Vouchers</a>
+                            <a class="dropdown-item text-black" href="{% url 'products' %}?category=honey">Honey</a>
+                            <a class="dropdown-item text-black" href="{% url 'products' %}?category=accessories">Accessories</a>
+                            <a class="dropdown-item text-black" href="{% url 'products' %}?category=courses">Courses</a>                      
+                            <a class="dropdown-item text-black" href="{% url 'products' %}?category=gift,vouchers">Gift Vouchers</a>
                         </div>
                     </li>
                     <li class="nav-item">
