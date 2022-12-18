@@ -38,6 +38,7 @@
   </head>
   <body>
     <header>
+      <!--
         <nav class="navbar navbar-expand-lg darkheather text-black px-3">
             <a href="{% url 'home' %}" class="nav-link main-logo-link d-flex align-items-center ml-4">
                 <h2 class="logo-font text-black my-0 jones-honey-name"><strong>Jones Honey</strong></h2>
@@ -49,7 +50,7 @@
             <div class="collapse navbar-collapse text-black" id="navbarNav">
                 <ul class="navbar-nav text-black">
                     <li class="nav-item active">
-                        <a class="nav-link text-black" href="#">Shop</a>
+                        <a class="nav-link text-black navbar-toggler" type="button" data-toggle="collapse" data-target href="#">Shop</a>
                         <div class="dropdown-menu heather" aria-labelledby="user-options">
                               <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                               <a href="#" class="dropdown-item">Honey</a>
@@ -83,8 +84,8 @@
                     </div>
                 </form>
             </div>
-
-
+      -->
+        
 <!--
           <div class="search-box">
           <form method="GET" action="">
@@ -93,10 +94,7 @@
             </button>
             <input type="text" name="q" class="input-search" placeholder="Type to search">
           </form>
-        </div>
--->
-
-
+        </div>        
         <div class="text-center">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                 <i class="fa-solid fa-cart-shopping text-black icon"></i>
@@ -135,6 +133,76 @@
         </div>
 
       </div>
+-->
+
+    <nav class="navbar navbar-expand-lg navbar-light text-black mx-3">
+        <a class="nav-link text-black main-logo-link p-0" href="{% url 'home' %}">
+            <h2 class="logo-font text-black my-0 jones-honey-name"><strong>Jones Honey</strong></h2>
+        </a>
+        <button class="navbar-toggler text-black" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-black"></span>
+        </button>
+
+      <div class="collapse navbar-collapse text-black" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link text-black" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-black" href="#">FAQ</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-black" href="#">Courses</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Shop
+                  </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-black" href="#">All Products</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-black" href="#">Honey</a>
+                    <a class="dropdown-item text-black" href="#">Accessories</a>
+                    <a class="dropdown-item text-black" href="#">Courses</a>
+                    <a class="dropdown-item text-black" href="#">Gift Vouchers</a>
+                </div>
+              </li>
+          </ul>
+
+          <form class="nav-link position-relative px-0">
+              <a class="text-black icon text-center" type="submit"><i class="fa-solid fa-magnifying-glass text-black icon"></i></a>
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          </form>
+
+          <div class="navbar-nav position-relative">
+              <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa-regular fa-user text-black icon text-center"></i>
+                  <p>My Account</p>
+              </a>
+              <div class="dropdown-menu heather" aria-labelledby="user-options">
+                  {% if request.user.is_authenticated %}
+                      {% if request.user.is_superuser %}
+                          <a href="#" class="dropdown-item">Product Management</a>
+                      {% endif %}
+                      <a href="#" class="dropdown-item">My Profile</a>
+                      <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                  {% else %}
+                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                  {% endif %}
+              </div>
+          </div>
+      </div>
+    </nav>
+
+<div id="message-banner" class="row text-center mx-0">
+  <div class="col bg-black text-white">
+    <h4 class="logo-font my-1">Free honey dripper with all orders over £{{ free_gift_threshold }}!</h4>
+  </div>
+
+</div>
+
+
     </header>
 
     

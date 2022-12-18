@@ -105,6 +105,10 @@ body {
     color: #000 !important;
 }
 
+.navbar-toggler-icon {
+    color: black !important;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
