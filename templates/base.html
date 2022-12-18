@@ -38,8 +38,8 @@
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg darkheather text-black">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link d-flex align-items-center">
+        <nav class="navbar navbar-expand-lg darkheather text-black px-3">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link d-flex align-items-center ml-4">
                 <h2 class="logo-font text-black my-0 jones-honey-name"><strong>Jones Honey</strong></h2>
                 <i class="fa-solid fa-honey-pot icon jones-honey-icon text-black"></i>
             </a>
@@ -49,7 +49,14 @@
             <div class="collapse navbar-collapse text-black" id="navbarNav">
                 <ul class="navbar-nav text-black">
                     <li class="nav-item active">
-                        <a class="nav-link text-black" href="{% url 'products' %}">Shop</a>
+                        <a class="nav-link text-black" href="#">Shop</a>
+                        <div class="dropdown-menu heather" aria-labelledby="user-options">
+                              <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                              <a href="#" class="dropdown-item">Honey</a>
+                              <a href="#" class="dropdown-item">Accessories</a>
+                              <a href="#" class="dropdown-item">Courses</a>
+                              <a href="#" class="dropdown-item">Gift Vouchers</a>
+                      </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" href="#">About</a>
@@ -122,7 +129,7 @@
             </div>
         </div>
       </nav>
-      <div id="message-banner" class="row text-center">
+      <div id="message-banner" class="row text-center mx-0">
         <div class="col bg-black text-white">
           <h4 class="logo-font my-1">Free honey dripper with all orders over £{{ free_gift_threshold }}!</h4>
         </div>
