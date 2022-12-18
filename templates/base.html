@@ -38,44 +38,57 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg darkheather text-black">
-        <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font text-black my-0 jones-honey-name"><strong>Jones Honey</strong></h2>
-            <i class="fa-solid fa-honey-pot icon jones-honey-icon text-black"></i>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-black" id="navbarNav">
-          <ul class="navbar-nav text-black">
-            <li class="nav-item active">
-              <a class="nav-link text-black" href="{% url 'products' %}">Shop</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black" href="#">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-black" href="#">Courses</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="text-center">
-            <a class="text-black nav-link" href="#">
-                <i class="fa-solid fa-magnifying-glass text-black icon"></i>
-                <p>Search</p>
+        <nav class="navbar navbar-expand-lg darkheather text-black">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link d-flex align-items-center">
+                <h2 class="logo-font text-black my-0 jones-honey-name"><strong>Jones Honey</strong></h2>
+                <i class="fa-solid fa-honey-pot icon jones-honey-icon text-black"></i>
             </a>
-      
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-black" id="navbarNav">
+                <ul class="navbar-nav text-black">
+                    <li class="nav-item active">
+                        <a class="nav-link text-black" href="{% url 'products' %}">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Courses</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search here">
+                        <div class="input-group-append">
+                            <a class="text-black nav-link" href="#">
+                                <i class="fa-solid fa-magnifying-glass text-black icon form-control" type="submit"></i>
+                                <p>Search</p>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+<!--
+          <div class="search-box">
+          <form method="GET" action="">
+            <button class="btn-search">
+              <i class="fa-solid fa-magnifying-glass text-black icon"></i>
+            </button>
+            <input type="text" name="q" class="input-search" placeholder="Type to search">
+          </form>
         </div>
-        <div class="search-box">
-          <button class="btn-search">
-            <i class="fa-solid fa-magnifying-glass text-black icon"></i>
-          </button>
-          <input type="text" class="input-search" placeholder="Type to search">
-        </div>
+-->
+
 
         <div class="text-center">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
