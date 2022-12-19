@@ -10,6 +10,10 @@ body {
     font-family: 'Gorditas', cursive;
 }
 
+a{
+    text-decoration: none;
+}
+
 .header-container{
     min-height: 500px;
 }
@@ -29,6 +33,12 @@ body {
 .product-image{
     height: auto;
     width: 100%;
+}
+
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
 }
 
 /* from Bulma */
