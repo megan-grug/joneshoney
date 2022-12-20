@@ -8,45 +8,30 @@
 
     <div class="container-fluid p-0">
         <div class="row text-center bg-white text-black  p-4">
-            <div class="col col-md-3 bg-white text-black">
-                <a class="dropdown-toggle text-black" href="#" id="dropdownMenuOffset" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="col col-md-2 bg-white text-black">
+                <a href="{% url 'products' %}" class="dropdown-toggle text-black">
+                    All Products
+                </a>
+            </div>
+            <div class="col col-md-2 bg-white text-black">
+                <a href="{% url 'products' %}?category=honey" class="text-black">
                     Honey
                 </a>
-                <div class="dropdown-menu heather" aria-labelledby="dropdownMenuOffset">
-                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                    <a href="{% url 'products' %}?category=honey" class="dropdown-item">All Honey</a>
-                </div>
             </div>
-            <div class="col col-md-3 bg-white text-black">
-                <a class="dropdown-toggle text-black" href="#" id="dropdownMenuOffset" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="col col-md-2 bg-white text-black">
+                <a class="text-black" href="{% url 'products' %}?category=accessories">
                     Accessories
                 </a>
-                <div class="dropdown-menu heather" aria-labelledby="dropdownMenuOffset">
-                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                    <a href="{% url 'products' %}?category=accessories" class="dropdown-item">All Accessories</a>
-                </div>
             </div>
-            <div class="col col-md-3 bg-white text-black">
-                <a class="dropdown-toggle text-black" href="#" id="dropdownMenuOffset" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="col col-md-2 bg-white text-black">
+                <a class="text-black" href="{% url 'products' %}?category=courses">
                     Courses
                 </a>
-                <div class="dropdown-menu heather" aria-labelledby="dropdownMenuOffset">
-                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                    <a href="{% url 'products' %}?category=honey" class="dropdown-item">All Courses</a>
-                </div>
             </div>
-            <div class="col col-md-3 bg-white text-black">
-                <a class="dropdown-toggle text-black" href="#" id="dropdownMenuOffset" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="col col-md-2 bg-white text-black">
+                <a class="text-black" href="{% url 'products' %}?category=vouchers">
                     Gift Vouchers
                 </a>
-                <div class="dropdown-menu heather" aria-labelledby="dropdownMenuOffset">
-                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                    <a href="{% url 'products' %}?category=gift,vouchers" class="dropdown-item">All Gift Vouchers</a>
-                </div>
             </div>
         </div>
     </div>
@@ -155,4 +140,38 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+
+
+{% block postload_js %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}
