@@ -9,11 +9,11 @@ body {
     color: #555;
     font-family: 'Gorditas', cursive;
 }
-
+/*
 a{
     text-decoration: none;
 }
-
+*/
 .bag-header{
     margin-top:100px;
 }
@@ -125,6 +125,11 @@ a.category-badge > span.badge:hover {
 
 .text-black {
     color: #000 !important;
+}
+
+/* ensures the increment/decrement arrows always display */
+input{
+  opacity: 1;
 }
 
 .navbar-toggler-icon {
