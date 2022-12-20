@@ -14,6 +14,10 @@ a{
     text-decoration: none;
 }
 
+.bag-header{
+    margin-top:100px;
+}
+
 .header-container{
     min-height: 500px;
 }
