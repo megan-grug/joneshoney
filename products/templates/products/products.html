@@ -5,6 +5,52 @@
 {% endblock %}
 
 {% block content %}
+
+    <div class="container-fluid p-0">
+        <div class="row text-center bg-white text-black  p-4">
+            <div class="col col-md-3 bg-white text-black">
+                <a class="dropdown-toggle text-black" href="#" id="dropdownMenuOffset" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Honey
+                </a>
+                <div class="dropdown-menu heather" aria-labelledby="dropdownMenuOffset">
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                    <a href="{% url 'products' %}?category=honey" class="dropdown-item">All Honey</a>
+                </div>
+            </div>
+            <div class="col col-md-3 bg-white text-black">
+                <a class="dropdown-toggle text-black" href="#" id="dropdownMenuOffset" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Accessories
+                </a>
+                <div class="dropdown-menu heather" aria-labelledby="dropdownMenuOffset">
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                    <a href="{% url 'products' %}?category=accessories" class="dropdown-item">All Accessories</a>
+                </div>
+            </div>
+            <div class="col col-md-3 bg-white text-black">
+                <a class="dropdown-toggle text-black" href="#" id="dropdownMenuOffset" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Courses
+                </a>
+                <div class="dropdown-menu heather" aria-labelledby="dropdownMenuOffset">
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                    <a href="{% url 'products' %}?category=honey" class="dropdown-item">All Courses</a>
+                </div>
+            </div>
+            <div class="col col-md-3 bg-white text-black">
+                <a class="dropdown-toggle text-black" href="#" id="dropdownMenuOffset" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Gift Vouchers
+                </a>
+                <div class="dropdown-menu heather" aria-labelledby="dropdownMenuOffset">
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                    <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                    <a href="{% url 'products' %}?category=gift,vouchers" class="dropdown-item">All Gift Vouchers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
