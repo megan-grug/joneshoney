@@ -9,13 +9,19 @@ body {
     color: #555;
     font-family: 'Gorditas', cursive;
 }
-/*
+
 a{
     text-decoration: none;
 }
-*/
+
 .bag-header{
     margin-top:100px;
+}
+
+.bag-img{
+    max-width:300px;
+    max-height: 300px;
+    margin-right: 50px;
 }
 
 .header-container{
